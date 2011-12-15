@@ -1,4 +1,4 @@
-# PCA9635 based RGB LED baord library
+# PCA9635 based RGB LED board library
 
 The boards have 3 PCA9635 drivers addresses using a specific scheme.
 
