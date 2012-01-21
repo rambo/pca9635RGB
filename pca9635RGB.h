@@ -1,7 +1,7 @@
 // safety againts double-include
 #ifndef pca9635RGB_h
 #define pca9635RGB_h
-#include <WProgram.h> 
+#include <Arduino.h> 
 #include <pca9635.h>
 
 class pca9635RGB
