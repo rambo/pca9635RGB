@@ -26,7 +26,7 @@ void setup()
 
     // Set device address and call I2c.begin()
     Serial.println("Initializing led drivers");
-    driverboard.begin(8);
+    driverboard.begin(0);
 
     // Dump the driver mode registers to check they're correct
     driverboard.R.dump_registers(0x0, 0x01);
