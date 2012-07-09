@@ -33,7 +33,7 @@ void pca9635RGB::set_board_address(byte board_num)
 }
 
 // Funky way to handle default arguments
-void pca9635RGB::begin(byte board_addr, wire_begin)
+void pca9635RGB::begin(byte board_addr, boolean wire_begin)
 {
     pca9635RGB::begin(board_addr, wire_begin, true);
 }
