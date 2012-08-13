@@ -25,7 +25,7 @@ void setup()
     I2c.setSpeed(true); // Fast-mode support
 
     // Set device address and call I2c.begin()
-    Serial.println("Initializing led drivers");
+    Serial.println(F("Initializing led drivers"));
     driverboard.begin(0);
 
     // Dump the driver mode registers to check they're correct
@@ -39,7 +39,7 @@ void setup()
 
 
 
-    Serial.println("Booted");
+    Serial.println(F("Booted"));
 }
 
 const byte test_leds_max = 8;
@@ -47,30 +47,30 @@ void loop()
 {
     for (byte ledno = 0; ledno < test_leds_max; ledno++)
     {
-        Serial.print("Turning on R led ");
+        Serial.print(F("Turning on R led "));
         Serial.println(ledno, DEC);
         //driverboard.R.set_led_mode(ledno, 1);
         driverboard.R.set_led_pwm(ledno, 255);
         delay(250);
-        Serial.print("Turning off R led ");
+        Serial.print(F("Turning off R led "));
         Serial.println(ledno, DEC);
         driverboard.R.set_led_pwm(ledno, 0);
         //driverboard.R.set_led_mode(ledno, 0);
-        Serial.print("Turning on G led ");
+        Serial.print(F("Turning on G led "));
         Serial.println(ledno, DEC);
         //driverboard.G.set_led_mode(ledno, 1);
         driverboard.G.set_led_pwm(ledno, 255);
         delay(250);
-        Serial.print("Turning off G led ");
+        Serial.print(F("Turning off G led "));
         Serial.println(ledno, DEC);
         driverboard.G.set_led_pwm(ledno, 0);
         //driverboard.G.set_led_mode(ledno, 0);
-        Serial.print("Turning on B led ");
+        Serial.print(F("Turning on B led "));
         Serial.println(ledno, DEC);
         //driverboard.B.set_led_mode(ledno, 1);
         driverboard.B.set_led_pwm(ledno, 255);
         delay(250);
-        Serial.print("Turning off B led ");
+        Serial.print(F("Turning off B led "));
         Serial.println(ledno, DEC);
         driverboard.B.set_led_pwm(ledno, 0);
         //driverboard.B.set_led_mode(ledno, 0);
@@ -78,7 +78,7 @@ void loop()
     delay(500);
     for (byte ledno = 0; ledno < test_leds_max; ledno++)
     {
-        Serial.print("RGB Fading out led ");
+        Serial.print(F("RGB Fading out led "));
         Serial.println(ledno, DEC);
         for (byte value=128; value > 0; value--)
         {
